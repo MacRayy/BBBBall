@@ -8,7 +8,7 @@ import Header from 'src/components/header';
 // Create component
 const App = () => {
   return (
-    <Header /> // Self closing tag
+    <Header headerText={'Albums'}/> // with headerText we give value to its child component
   );
 };
 

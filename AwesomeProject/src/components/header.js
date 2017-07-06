@@ -3,12 +3,12 @@ import React from 'react';
 import { Text, View } from 'react-native';
 //View: to position and style elements
 // Make a component
-const Header = () => {
+const Header = (props) => {
     const { textStyle } = styles;
 
     return (
         <View style={styles.viewStyle}>
-            <Text style={textStyle}>Albums!</Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     );    
 };
@@ -19,7 +19,10 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: 50,
-        paddingTop: 15
+        paddingTop: 15,
+        shadowColor: 'green',
+        shadowOffset: { width: 0, height: 2},
+        shadowOpacity: 0.2
     },
     textStyle: {
         fontSize: 20
