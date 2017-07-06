@@ -1,21 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import ReactNative from 'react-native';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>mivaaaan?</Text>
-      </View>
-    );
-  }
+const App = () => {
+  return (
+    <Text>Some Text</Text>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
