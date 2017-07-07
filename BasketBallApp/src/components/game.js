@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-class GameComponent extends React.Component {
+export default class GameComponent extends React.Component {
     render() {
         return (
-            <Text>Cool</Text>
+            <View>
+                <Text>New Game</Text>
+                <Button
+                    title="Add new player"
+                    // onPress={this.addNewPlayer}
+                ></Button>
+            </View>
         )
     }
+
+    // addNewPlayer() {
+    //
+    // }
 }
 
-export default GameComponent
+// export default GameComponent

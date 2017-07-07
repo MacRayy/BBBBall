@@ -1,7 +1,7 @@
 import React from 'react';
 import { Scene, Router } from 'react-native-router-flux'
 
-import { GameComponent } from './game'
+import GameComponent from './game'
 
 const RouterComponent = () => {
     return (
@@ -11,6 +11,7 @@ const RouterComponent = () => {
                     key="game"
                     component={GameComponent}
                     title="New Game"
+                    initial={true}
                 />
             </Scene>
         </Router>
