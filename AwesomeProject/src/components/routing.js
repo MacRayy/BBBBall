@@ -40,6 +40,6 @@ Ahol a navigalo gomb van:
 import { Actions } from 'react-native-router-flux';
 
 function a gombnyomason = () => {
-    Actions.NavigateTo();
+    
 }
 */
