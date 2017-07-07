@@ -3,19 +3,32 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import axios from 'axios';
 
 export default class GameComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        state = {
+            name: '',
+            number: ''
+        }
+    }
+
     render() {
         return (
             <View>
                 <Text>New Player</Text>
                 <TextInput
+                    onChangeText={(name) => this.setState({name})}
                     placeholder="Name"
                     />
                 <TextInput
+                    onChangeText={(number) => this.setState({number})}
                     placeholder="Number"
                     />
+                {/*<Text>
+                    {this.state.name}
+                </Text>*/}
                 <Button
                     title="Add new player"
-                    onPress={this.addNewPlayer}
+                    onPress={this.addNewPlayer.bind(this)}
                 ></Button>
             </View>
         )
@@ -34,8 +47,8 @@ export default class GameComponent extends React.Component {
 
     addNewPlayer() {
         axios.post('https://nickel-pheasant.glitch.me/player', {
-            name: 'Sanya',
-            number: 12
+            name: this.state.name,
+            number: this.state.number
         })
         .then(function (response) {
             console.log(response.data);
