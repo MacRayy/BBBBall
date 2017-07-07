@@ -1,12 +1,43 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import axios from 'axios';
 
-class GameComponent extends React.Component {
+export default class GameComponent extends React.Component {
     render() {
         return (
-            <Text>Cool</Text>
+            <View>
+                <Text>New Player</Text>
+                <TextInput
+                    placeholder="Name"
+                    />
+                <TextInput
+                    placeholder="Number"
+                    />
+                <Button
+                    title="Add new player"
+                    onPress={this.addNewPlayer}
+                ></Button>
+            </View>
         )
     }
+
+    addNewPlayer() {
+        axios.post('https://nickel-pheasant.glitch.me/player', {
+            name: 'Sanya',
+            number: 12
+        })
+        .then (function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    }
+
+
+    // addNewPlayer() {
+    //
+    // }
 }
 
-export default GameComponent
+// export default GameComponent
