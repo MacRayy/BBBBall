@@ -1,20 +1,19 @@
 import React from 'react';
 import { Navigator } from 'react-native';
 
-class Navigation extends React.Component {
-    react() {
-        return (
-            <navigator
-                initialRoute=\{\{id: 'NewGame'}}
-        renderScene={this.navigatorRenderScene}/>
-        );
+export default class Navigation extends React.Component {
+    constructor(props) {
+       super(props);
     }
 
-    navigatorRenderScene(route, navigator) {
-        _navigator = navigator;
-        switch (route.id) {
-            case 'newGame':
-                return (<First navigator={navigator} title="newGame"/>);
+    <Navigator
+        initialRoute={{ id: 'NewGame' }}
+        renderScene={ this.renderScene } >
+    </Navigator>
+
+    renderScene(route, navigator) {
+        if(route.id == 'NewGame') {
+            return <NewGame navigator={navigator} />
         }
-    }
+    },
 }

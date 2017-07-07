@@ -1,13 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Navigator,  } from 'react-native';
-import { NewGame } from './App/new-game/newGame'
+import { NewGame } from './App/new-game/newGame';
+import { Navigation } from './App/navigator';
 
 export default class App extends React.Component {
+    constructor(props) {
+       super(props);
+    }
+
     navNewGame() {
-        // this.props.navigator.push({
-        //     id: 'NewGame'
-        // });
-        console.log(this.props.navigation);
+        this.props.navigator.push({
+            id: 'NewGame'
+        });
+        // console.log(this.props);
     }
 
    render() {
@@ -16,7 +21,7 @@ export default class App extends React.Component {
         //        <Text>Kosárlabda statisztika app</Text>
         //    </View>
            <TouchableHighlight style={styles.container}
-                onPress={this.navNewGame.bind(this)}
+                onPress={this.navNewGame().bind(this)}
             >
                 <View style={styles.container}>
                     <Text>Új mérközés létrehozása</Text>
