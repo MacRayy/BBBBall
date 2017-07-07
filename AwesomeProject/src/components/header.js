@@ -2,7 +2,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 //View: to position and style elements
-// Make a component
+// Make a component (functional component- must return JSX)
 const Header = (props) => {
     const { textStyle } = styles;
 
