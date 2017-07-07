@@ -21,13 +21,10 @@ export default class GameComponent extends React.Component {
         )
     }
 
-    addNewPlayer() {
-        axios.post('https://nickel-pheasant.glitch.me/player', {
-            name: 'Sanya',
-            number: 12
-        })
+    listPlayers() {
+        axios.get('https://nickel-pheasant.glitch.me/players')
         .then (function (response) {
-            console.log(response);
+            console.log(response.data);
         })
         .catch(function (error) {
             console.log(error);
@@ -35,9 +32,16 @@ export default class GameComponent extends React.Component {
     }
 
 
-    // addNewPlayer() {
-    //
-    // }
+    addNewPlayer() {
+        axios.post('https://nickel-pheasant.glitch.me/player', {
+            name: 'Sanya',
+            number: 12
+        })
+        .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
 }
-
-// export default GameComponent
