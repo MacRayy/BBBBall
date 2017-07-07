@@ -29,7 +29,7 @@ export default class GameComponent extends React.Component {
                 <View style={styles.button}>
                     <Button
                         title="Add new player"
-                        
+
                         onPress={this.addNewPlayer.bind(this)}
                     ></Button>
                 </View>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         backgroundColor: 'orange',
         fontWeight: 'bold',
-        fontSize: 20   
+        fontSize: 20
     },
     input: {
         padding: 20,

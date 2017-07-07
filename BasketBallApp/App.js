@@ -9,17 +9,18 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <GameComponent/>
-                {/* <Text>Basketball App</Text>
+                {/* <Text>Basketball App</Text> */}
                 <Button
-                    onPress={() => this.navigation()}
+                    onPress={Actions.game()}
+                    // onPress={() => this.navigation()}
                     title="New Game">
-                </Button> */}
+                </Button>
             </View>
         );
     }
 
     // navigation() {
-        // Actions.game
+        // Actions.game()
         // console.log(Actions);
     // }
 }
