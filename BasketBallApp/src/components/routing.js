@@ -1,17 +1,22 @@
 import React from 'react';
-import { Scene, Router } from 'react-native-router-flux'
+import { Scene, Router } from 'react-native-router-flux';
 
-import GameComponent from './game'
+import HomeComponent from './home';
+import GameComponent from './game';
 
 const RouterComponent = () => {
     return (
         <Router>
             <Scene key="root">
+                <Scene 
+                    key="home" 
+                    component={HomeComponent} 
+                    title="Home" 
+                />
                 <Scene
                     key="game"
                     component={GameComponent}
                     title="New Game"
-                    initial={true}
                 />
             </Scene>
         </Router>

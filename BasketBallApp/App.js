@@ -2,33 +2,39 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-import GameComponent from './src/components/game'
+import RouterComponent from './src/components/routing';
 
 export default class App extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <GameComponent/>
-                {/* <Text>Basketball App</Text>
-                <Button
-                    onPress={() => this.navigation()}
-                    title="New Game">
-                </Button> */}
-            </View>
+            <RouterComponent />
         );
     }
-
-    // navigation() {
-        // Actions.game
-        // console.log(Actions);
-    // }
 }
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <GameComponent/>
+//                 {/* <Text>Basketball App</Text>
+//                 <Button
+//                     onPress={() => this.navigation()}
+//                     title="New Game">
+//                 </Button> */}
+//             </View>
+//         );
+//     }
 
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  },
-});
+//     // navigation() {
+//         // Actions.game
+//         // console.log(Actions);
+//     // }
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     // flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'flex-start'
+//   },
+// });
